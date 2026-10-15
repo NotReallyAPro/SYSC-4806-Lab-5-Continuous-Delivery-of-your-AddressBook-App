@@ -77,7 +77,7 @@ public class SpringApplication {
     }
 */
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
         org.springframework.boot.SpringApplication.run(SpringApplication.class, args);
     }
 }
