@@ -29,6 +29,13 @@ class BuddyInfoTest {
     }
 
     @Test
+    void getAddressBook() {
+        AddressBook book = new AddressBook();
+        book.addBuddy(buddy);
+        assertEquals(book, buddy.getAddressBook());
+    }
+
+    @Test
     void setName() {
         buddy.setName("Jane Doe");
         assertEquals("Jane Doe", buddy.getName());

@@ -14,6 +14,12 @@ class AddressBookTest {
     }
 
     @Test
+    void getId() {
+        book.setId(100);
+        assertEquals(100, book.getId());
+    }
+
+    @Test
     void addBuddy() {
         BuddyInfo buddy = new BuddyInfo("John Doe", "1 Street Ave.", "(111) 111-1111");
         book.addBuddy(buddy);

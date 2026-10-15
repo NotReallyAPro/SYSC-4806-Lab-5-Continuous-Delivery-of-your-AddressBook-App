@@ -19,16 +19,22 @@ public class AddressBook {
         buddies = new ArrayList<BuddyInfo>();
     }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public Integer getId() {
         return id;
     }
 
     public void addBuddy(BuddyInfo buddy) {
         buddies.add(buddy);
+        buddy.setAddressBook(this);
     }
 
     public void removeBuddy(BuddyInfo buddy) {
         buddies.remove(buddy);
+        buddy.setAddressBook(null);
     }
 
     public List<BuddyInfo> getBuddies() {

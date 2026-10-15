@@ -57,7 +57,9 @@ public class SpringApplication {
             logger.info("=== AddressBook tests ===");
 
             // If empty, add buddies to an address book then save the address book
+
             AddressBook book = new AddressBook();
+            book.setId(100);
             book.addBuddy(new BuddyInfo("Homer", "742 Evergreen Terrace", "(939) 555-0113"));
             book.addBuddy(new BuddyInfo("Marge", "742 Evergreen Terrace", "(939) 555-0113"));
             book.addBuddy(new BuddyInfo("Bart", "742 Evergreen Terrace", "(939) 555-0113"));
@@ -73,9 +75,10 @@ public class SpringApplication {
                 logger.info(b.toString());
             }
             logger.info("");
+
         };
     }
-*/
+    */
 
     public static void main(String[] args) {
         org.springframework.boot.SpringApplication.run(SpringApplication.class, args);

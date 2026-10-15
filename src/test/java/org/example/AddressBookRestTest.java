@@ -96,7 +96,7 @@ public class AddressBookRestTest {
                 .expectStatus()
                 .is2xxSuccessful();
 
-        // Retrieve the buddies and verify the response
+        // Retrieve the buddy and verify the response
         restTestClient.get()
                 .uri(addressBookUrl + "/buddies")
                 .exchange()

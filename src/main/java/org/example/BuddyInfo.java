@@ -1,9 +1,6 @@
 package org.example;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class BuddyInfo {
@@ -15,6 +12,9 @@ public class BuddyInfo {
     private String name;
     private String address;
     private String phoneNumber;
+
+    @ManyToOne
+    private AddressBook addressBook = null;
 
     public Integer getId() {
         return id;
@@ -32,6 +32,10 @@ public class BuddyInfo {
         return phoneNumber;
     }
 
+    public AddressBook getAddressBook() {
+        return addressBook;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -42,6 +46,10 @@ public class BuddyInfo {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public void setAddressBook(AddressBook addressBook) {
+        this.addressBook = addressBook;
     }
 
     public BuddyInfo() {
