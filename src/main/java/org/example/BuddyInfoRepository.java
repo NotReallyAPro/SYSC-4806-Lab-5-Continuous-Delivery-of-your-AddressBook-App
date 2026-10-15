@@ -1,0 +1,10 @@
+package org.example;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface BuddyInfoRepository extends CrudRepository<BuddyInfo, Integer> {
+
+    List<BuddyInfo> findByAddress(String address);
+}

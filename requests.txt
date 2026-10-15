@@ -1,0 +1,17 @@
+1. Create an AddressBook
+curl.exe -X POST "http://localhost:8080/addressBooks" -H "Content-Type: application/json" -d "{}"
+
+2. Create a BuddyInfo
+Add or modify BuddyInfo object in buddy.json and run the following curl command from the
+directory containing buddy.json:
+curl.exe -X POST "http://localhost:8080/buddyInfoes" -H "Content-Type: application/json" --data-binary "@buddy.json"
+
+3. Add a BuddyInfo to an AddressBook
+Replace {addressBookId} and {buddyInfoId} with their respective IDs. Do not include the curly brackets.
+curl.exe -X POST "http://localhost:8080/addressBooks/{addressBookId}/buddies" -H "Content-Type: text/uri-list" --data-raw "http://localhost:8080/buddyInfoes/{buddyInfoId}"
+
+4. View buddies in an AddressBook using REST
+curl.exe "http://localhost:8080/addressBooks/{addressBookId}/buddies"
+
+5. View buddies in an AddressBook using Thymeleaf
+http://localhost:8080/addressbooks?id={addressBookId}
