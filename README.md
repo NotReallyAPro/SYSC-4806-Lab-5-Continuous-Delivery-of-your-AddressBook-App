@@ -14,7 +14,7 @@ Run curl commands in powershell.
 
 3. Add a BuddyInfo to an AddressBook:
    Replace {addressBookId} and {buddyInfoId} with their respective IDs. Do not include the curly brackets.
-   curl.exe -X POST "/addressBooks/{addressBookId}/buddies" -H "Content-Type: text/uri-list" --data-raw "https://exampleapp-gqaedhdydeefbte6.northcentralus-01.azurewebsites.net/buddyInfoes/{buddyInfoId}"
+   curl.exe -X POST "https://exampleapp-gqaedhdydeefbte6.northcentralus-01.azurewebsites.net/addressBooks/{addressBookId}/buddies" -H "Content-Type: text/uri-list" --data-raw "https://exampleapp-gqaedhdydeefbte6.northcentralus-01.azurewebsites.net/buddyInfoes/{buddyInfoId}"
 
 4. View buddies in an AddressBook using REST:
    curl.exe "https://exampleapp-gqaedhdydeefbte6.northcentralus-01.azurewebsites.net/addressBooks/{addressBookId}/buddies"
