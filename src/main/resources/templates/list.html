@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All Address Books</title>
+</head>
+<body>
+    <h1>All Address Books</h1>
+
+    <form th:action="@{/addressbooklist}" method="post">
+        <button type="submit">Create New Address Book</button>
+    </form>
+
+    <h2>Existing Address Books</h2>
+
+    <p th:if="${#lists.isEmpty(addressBooks)}">
+        No address books.
+    </p>
+
+    <table th:unless="${#lists.isEmpty(addressBooks)}">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="book : ${addressBooks}">
+                <td th:text="${book.id}"></td>
+                <td>
+                    <a th:href="@{/addressbooklist(id=${book.id})}">
+                        View Buddies
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
