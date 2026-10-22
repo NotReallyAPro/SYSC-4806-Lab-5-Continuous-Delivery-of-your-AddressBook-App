@@ -31,7 +31,7 @@ class AddressBookControllerTest {
         when(addressBookRepository.findById(1)).thenReturn(Optional.of(addressBook));
 
         restTestClient.get()
-                .uri("/addressbooks?id=1")
+                .uri("/addressbooklist?id=1")
                 .exchange()
                 .expectStatus()
                 .isOk()

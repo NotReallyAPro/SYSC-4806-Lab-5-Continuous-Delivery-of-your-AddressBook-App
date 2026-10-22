@@ -1,4 +1,4 @@
-SYSC4806 Lab 5 example application
+SYSC4806 Example Spring Application
 
 Domain: https://exampleapp-gqaedhdydeefbte6.northcentralus-01.azurewebsites.net
 
